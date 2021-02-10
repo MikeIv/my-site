@@ -1,4 +1,4 @@
-/*-- Page --*/
+/*-- Main Page --*/
 .page {
   font-family: "Raleway", sans-serif;
   font-size: 10px;
@@ -11,6 +11,26 @@
   "main"
   "footer";
   grid-template-rows: 1fr 0 0;
+  grid-template-columns: 1fr;
+
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+
+/* --- Pages --- */
+.page__pages-body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 12.8rem 1fr 0;
   grid-template-columns: 1fr;
 
   min-height: 100vh;

@@ -100,9 +100,36 @@
   color: @base;
 
   text-decoration: none;
+  transition-duration: 0.4s;
 
 }
 
 .main-nav__link:hover {
-  color: @light
+  color: @light;
+  transform: scale(1.2, 1.2);
+  transition-duration: 0.4s;
+
+}
+
+
+/* --- pages header --- */
+.header__page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+}
+
+.header__page-h1 {
+  margin: 0;
+  padding: 0;
+  padding-left: 2rem;
+
+  font-size: 2rem;
+  color: @base;
+  text-transform: uppercase;
+
+  box-sizing: border-box;
 }

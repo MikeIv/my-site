@@ -173,7 +173,7 @@ img {
   font-style: normal;
   font-display: swap;
 }
-/*-- Page --*/
+/*-- Main Page --*/
 .page {
   font-family: "Raleway", sans-serif;
   font-size: 10px;
@@ -182,6 +182,17 @@ img {
   display: grid;
   grid-template-areas: "header" "main" "footer";
   grid-template-rows: 1fr 0 0;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* --- Pages --- */
+.page__pages-body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 12.8rem 1fr 0;
   grid-template-columns: 1fr;
   min-height: 100vh;
   margin: 0;
@@ -264,9 +275,28 @@ img {
   text-transform: uppercase;
   color: #415A77;
   text-decoration: none;
+  transition-duration: 0.4s;
 }
 .main-nav__link:hover {
   color: #778DA9;
+  transform: scale(1.2, 1.2);
+  transition-duration: 0.4s;
+}
+/* --- pages header --- */
+.header__page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.header__page-h1 {
+  margin: 0;
+  padding: 0;
+  padding-left: 2rem;
+  font-size: 2rem;
+  color: #415A77;
+  text-transform: uppercase;
+  box-sizing: border-box;
 }
 .main {
   grid-area: main;

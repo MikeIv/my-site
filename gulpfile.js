@@ -104,6 +104,7 @@ const copy = () => {
     "src/fonts/**/*.{woff,woff2}",
     "src/img/**",
     "src/scripts/**",
+    "src/page-*.html",
     "src/index.html"
   ], {
     base: "src"
@@ -133,6 +134,7 @@ const watch = () => {
   gulp.watch("src/less/**/*.less", gulp.series(css)).on("change", sync.reload);
   gulp.watch("src/*_build.html", gulp.series(fileincludehtml));
   gulp.watch("src/html/*.html", gulp.series(fileincludehtml));
+  gulp.watch("src/page-*.html", gulp.series(fileincludehtml));
 
   gulp.watch("src/index.html", gulp.series(html)).on("change", sync.reload);
 
