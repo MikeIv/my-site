@@ -410,3 +410,30 @@ img {
   padding: 0;
   background-color: #E0E1DD;
 }
+.portfolio__image {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.portfolio__info {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.portfolio__info-h3 {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  padding: 0;
+  font-family: inherit;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #878C99;
+  text-align: center;
+}
