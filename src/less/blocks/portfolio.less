@@ -25,6 +25,7 @@
 .portfolio__item {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 
   max-width: 45rem;
   min-width: 30rem;
@@ -37,6 +38,51 @@
   background-color: @exlight;
 }
 
+.portfolio__item-img-block {
+  position: relative;
+  display: flex;
+  flex-shrink: 1;
+
+  width: 100%;
+  min-height: 25rem;
+
+  margin: 0;
+  margin-bottom: auto;
+  padding: 0;
+}
+
+@media screen and (max-width: 640 {
+  
+}
+
+.portfolio__item-img-block:hover .portfolio__item-img--front {
+  transform: rotateY(180deg);
+}
+.portfolio__item-img-block:hover .portfolio__item-img--back {
+  transform: rotateY(360deg);
+}
+
+.portfolio__item-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  object-fit: cover;
+  backface-visibility: hidden;
+
+  transition: 1s;
+
+}
+
+.portfolio__item-img--front {
+
+}
+
+
+.portfolio__item-img--back {
+  transform: rotateY(180deg);
+}
+
 .portfolio__image {
   width: 100%;
   height: auto;
@@ -46,8 +92,10 @@
 }
 
 .portfolio__info {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 
   margin: 0;
   padding: 0;
@@ -55,6 +103,7 @@
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  box-sizing: border-box;
 }
 
 .portfolio__info-h3 {
@@ -69,4 +118,310 @@
   font-weight: bold;
   color: @gray;
   text-align: center;
+}
+
+.portfolio__info-txt {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: inherit;
+  font-size: 1.3em;
+
+  color: @gray;
+}
+
+
+/*--- add style from old site ---*/
+.advantage,
+.tools {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  max-width: 100rem;
+
+  margin: 0 auto;
+  padding: 0;
+}
+
+.advantage-block,
+.tools-block,
+.contacts-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 450px;
+  margin: 0;
+  margin-bottom: 80px;
+  padding: 0;
+  list-style: none;
+  background-color: #ffffff;
+}
+
+
+
+
+.advantage-block__item,
+.tools-block__item {
+  position: relative;
+  width: 240px;
+  min-height: 250px;
+  margin-bottom: 20px;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding-top: 90px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.advantage-block__item::before,
+.tools-block__item::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 115px;
+  width: 42px;
+  height: 42px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+}
+
+.advantage-block__item2::before {
+  background-position: 0 -43px;
+}
+
+.advantage-block__item3::before {
+  background-position: 0 -86px;
+}
+
+.advantage-block__item4::before {
+  background-position: 0 -129px;
+}
+
+.advantage-block__item5::before {
+  background-position: 0 -172px;
+}
+
+.advantage-block__item6::before {
+  background-position: 0 -215px;
+}
+
+.advantage-block__item7::before {
+  background-position: 0 -258px;
+}
+
+.advantage-block__item8::before {
+  background-position: 0 -301px;
+}
+
+.tools-block__item1::before {
+  background-position: 0 -344px;
+}
+
+.tools-block__item2::before {
+  background-position: 0 -387px;
+}
+
+.tools-block__item3::before {
+  background-position: 0 -430px;
+}
+
+.tools-block__item4::before {
+  background-position: 0 -473px;
+}
+
+.contacts-block__item {
+  display: block;
+  width: 100%;
+  min-height: 40px;
+  text-align: center;
+}
+
+.advantage-block__definition,
+.tools-block__definition,
+.contacts-block__connect {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 1rem;
+  font-size: 48px;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+  color: #919191;
+}
+
+.advantage-block__header,
+.tools-block__header {
+  min-height: 45px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #919191;
+  text-transform: uppercase;
+}
+
+.contacts-block__header {
+  min-height: 25px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #919191;
+  text-transform: uppercase;
+}
+
+.advantage-block__text,
+.tools-block__text {
+  padding-top: 10px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #919191;
+}
+
+.contacts-block__text {
+  padding-bottom: 20px;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 15px;
+  color: #4d4d4d;
+}
+
+.footer {
+  width: 100%;
+  min-height: 30px;
+  margin-top: 20px;
+  background-color: #f0f0f0;
+}
+
+.footer-block {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-width: 1142px;
+  min-height: 50px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-block p {
+  vertical-align: middle;
+}
+
+
+/* media rules */
+
+@media (max-width: 1170px) {
+  .nav-block__list {
+    margin-left: 10px;
+  }
+
+  .portfolio-block {
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .portfolio-block__item img {
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-block {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .nav-block {
+    width: 100%;
+  }
+
+  .nav-block__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    padding-top: 10px;
+    text-align: center;
+    list-style: none;
+  }
+
+  .header-block__definition {
+    width: 100%;
+    align-self: center;
+    font-size: 28px;
+    font-weight: 200;
+  }
+
+  .advantage-block__definition,
+  .tools-block__definition,
+  .contacts-block__connect {
+    width: 100%;
+    padding-top: 50px;
+    font-size: 21px;
+    font-weight: 100;
+  }
+
+  .portfolio-block,
+  .advantage-block,
+  .tools-block,
+  .contacts-block {
+    min-height: 200px;
+    margin-bottom: 20px;
+  }
+
+  .portfolio-block__item {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .advantage-block__item,
+  .tools-block__item {
+    width: 100%;
+    min-height: 180px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .portfolio-block__item img {
+    max-width: 300px;
+    height: 230px;
+  }
+
+  .advantage-block__header,
+  .tools-block__header {
+    margin: auto;
+    padding-top: 20px;
+  }
+
+  .advantage-block__item::before,
+  .tools-block__item::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .contacts {
+    min-height: 100px;
+    margin-bottom: 0px;
+  }
 }
