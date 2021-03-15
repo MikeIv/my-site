@@ -8,7 +8,7 @@
   margin: 0 auto;
   padding: 0;
 
-  background-color: @lightgray;
+  background-color: @white;
 }
 
 .portfolio__list {
@@ -44,15 +44,26 @@
   flex-shrink: 1;
 
   width: 100%;
-  min-height: 25rem;
+  min-height: 30rem;
 
   margin: 0;
   margin-bottom: auto;
   padding: 0;
 }
 
-@media screen and (max-width: 640 {
-  
+@media screen and (max-width: 640px) {
+  .portfolio__item-img-block {
+    position: relative;
+    display: flex;
+    flex-shrink: 1;
+
+    width: 100%;
+    min-height: 25rem;
+
+    margin: 0;
+    margin-bottom: auto;
+    padding: 0;
+  }
 }
 
 .portfolio__item-img-block:hover .portfolio__item-img--front {

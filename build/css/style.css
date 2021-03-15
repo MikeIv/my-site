@@ -389,7 +389,7 @@ img {
   min-height: 10rem;
   margin: 0 auto;
   padding: 0;
-  background-color: #B4BACC;
+  background-color: #ffffff;
 }
 .portfolio__list {
   display: flex;
@@ -416,7 +416,7 @@ img {
   display: flex;
   flex-shrink: 1;
   width: 100%;
-  min-height: 25rem;
+  min-height: 30rem;
   margin: 0;
   margin-bottom: auto;
   padding: 0;
@@ -644,6 +644,18 @@ img {
   }
   .portfolio-block__item img {
     margin: auto;
+  }
+}
+@media screen and (max-width: 640px) {
+  .portfolio__item-img-block {
+    position: relative;
+    display: flex;
+    flex-shrink: 1;
+    width: 100%;
+    min-height: 25rem;
+    margin: 0;
+    margin-bottom: auto;
+    padding: 0;
   }
 }
 @media (max-width: 600px) {
