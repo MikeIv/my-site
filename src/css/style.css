@@ -420,6 +420,7 @@ img {
   margin: 0;
   margin-bottom: auto;
   padding: 0;
+  perspective: 100rem;
 }
 .portfolio__item-img-block:hover .portfolio__item-img--front {
   transform: rotateY(180deg);
@@ -648,14 +649,7 @@ img {
 }
 @media screen and (max-width: 640px) {
   .portfolio__item-img-block {
-    position: relative;
-    display: flex;
-    flex-shrink: 1;
-    width: 100%;
     min-height: 25rem;
-    margin: 0;
-    margin-bottom: auto;
-    padding: 0;
   }
 }
 @media (max-width: 600px) {
