@@ -23,6 +23,7 @@
 }
 
 .portfolio__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -38,6 +39,7 @@
   background-color: @exlight;
 }
 
+
 .portfolio__item-img-block {
   position: relative;
   display: flex;
@@ -50,6 +52,8 @@
   margin-bottom: auto;
   padding: 0;
   perspective: 100rem;
+
+  text-decoration: none;
 }
 
 @media screen and (max-width: 640px) {
@@ -61,6 +65,7 @@
 .portfolio__item-img-block:hover .portfolio__item-img--front {
   transform: rotateY(180deg);
 }
+
 .portfolio__item-img-block:hover .portfolio__item-img--back {
   transform: rotateY(360deg);
 }
@@ -166,8 +171,6 @@
   list-style: none;
   background-color: #ffffff;
 }
-
-
 
 
 .advantage-block__item,

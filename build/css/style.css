@@ -400,6 +400,7 @@ img {
   padding: 0;
 }
 .portfolio__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -421,6 +422,7 @@ img {
   margin-bottom: auto;
   padding: 0;
   perspective: 100rem;
+  text-decoration: none;
 }
 .portfolio__item-img-block:hover .portfolio__item-img--front {
   transform: rotateY(180deg);
