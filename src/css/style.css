@@ -647,7 +647,11 @@ img {
 .tools__part {
   width: 100%;
   margin: 0;
+  margin-bottom: 7rem;
   padding: 0;
+  padding-bottom: 3rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #B4BACC;
 }
 .tools__h2 {
   margin: 0;
@@ -679,10 +683,13 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 12rem;
+  width: auto;
   height: 4rem;
   margin: 0;
   padding: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
   background-color: #E0E1DD;
 }
 .tools__item-txt {
@@ -691,7 +698,7 @@ img {
   padding: 0;
   text-align: center;
   font-family: inherit;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: bold;
   color: #1B263B;
 }
