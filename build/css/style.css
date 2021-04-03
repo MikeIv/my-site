@@ -411,6 +411,8 @@ img {
   margin-bottom: 3rem;
   padding: 0;
   background-color: #E0E1DD;
+  border: 1px solid #E0E1DD;
+  box-sizing: border-box;
 }
 .portfolio__item-img-block {
   position: relative;
@@ -423,6 +425,7 @@ img {
   padding: 0;
   perspective: 100rem;
   text-decoration: none;
+  background-color: #ffffff;
 }
 .portfolio__item-img-block:hover .portfolio__item-img--front {
   transform: rotateY(180deg);
@@ -465,12 +468,13 @@ img {
 .portfolio__info-h3 {
   width: 100%;
   margin: 0 auto;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 0;
   font-family: inherit;
   font-size: 1.6em;
   font-weight: bold;
-  color: #878C99;
+  color: #1B263B;
   text-align: center;
 }
 .portfolio__info-txt {
