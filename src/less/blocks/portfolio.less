@@ -33,12 +33,18 @@
   min-height: 30rem;
 
   margin: 0 auto;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   padding: 0;
 
   background-color: @exlight;
   border: 1px solid @exlight;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 640px) {
+  .portfolio__item {
+    max-width: 32rem;
+  }
 }
 
 
@@ -112,9 +118,9 @@
   margin: 0;
   padding: 0;
   padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   box-sizing: border-box;
 }
 
@@ -141,8 +147,10 @@
 
   font-family: inherit;
   font-size: 1.3em;
+  font-weight: 500;
+  line-height: 1.7em;
 
-  color: @gray;
+  color: @base;
 }
 
 
@@ -262,7 +270,7 @@
   width: 100%;
   padding-top: 80px;
   padding-bottom: 1rem;
-  font-size: 48px;
+  font-size: 38px;
   font-weight: 100;
   text-align: center;
   text-transform: uppercase;

@@ -207,7 +207,7 @@ img {
   width: 100%;
   margin: 0 auto;
   padding: 0;
-  background-color: #E0E1DD;
+  background-color: #e4e5e1;
 }
 .header__h2 {
   margin: 0;
@@ -297,7 +297,7 @@ img {
   align-items: center;
   width: 100%;
   height: 40%;
-  background-color: #E0E1DD;
+  background-color: #e4e5e1;
 }
 .header__page-h1 {
   margin: 0;
@@ -408,10 +408,10 @@ img {
   min-width: 30rem;
   min-height: 30rem;
   margin: 0 auto;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   padding: 0;
-  background-color: #E0E1DD;
-  border: 1px solid #E0E1DD;
+  background-color: #e4e5e1;
+  border: 1px solid #e4e5e1;
   box-sizing: border-box;
 }
 .portfolio__item-img-block {
@@ -460,9 +460,9 @@ img {
   margin: 0;
   padding: 0;
   padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   box-sizing: border-box;
 }
 .portfolio__info-h3 {
@@ -483,7 +483,9 @@ img {
   padding: 0;
   font-family: inherit;
   font-size: 1.3em;
-  color: #878C99;
+  font-weight: 500;
+  line-height: 1.7em;
+  color: #415A77;
 }
 /*--- add style from old site ---*/
 .advantage,
@@ -582,7 +584,7 @@ img {
   width: 100%;
   padding-top: 80px;
   padding-bottom: 1rem;
-  font-size: 48px;
+  font-size: 38px;
   font-weight: 100;
   text-align: center;
   text-transform: uppercase;
@@ -654,6 +656,8 @@ img {
   margin-bottom: 7rem;
   padding: 0;
   padding-bottom: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   box-sizing: border-box;
   border-bottom: 1px solid #B4BACC;
 }
@@ -661,6 +665,8 @@ img {
   margin: 0;
   margin-bottom: 4rem;
   padding: 0;
+  padding-left: 0.5rem;
+  box-sizing: border-box;
   font-family: inherit;
   font-size: 3em;
   font-weight: bold;
@@ -670,6 +676,8 @@ img {
   margin: 0;
   margin-bottom: 3rem;
   padding: 0;
+  padding-left: 0.5rem;
+  box-sizing: border-box;
   font-family: inherit;
   font-size: 2em;
   font-weight: bold;
@@ -690,11 +698,14 @@ img {
   width: auto;
   height: 4rem;
   margin: 0;
+  margin-bottom: 1.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   padding: 0;
   padding-left: 1rem;
   padding-right: 1rem;
   box-sizing: border-box;
-  background-color: #E0E1DD;
+  background-color: #e4e5e1;
 }
 .tools__item-txt {
   width: 100%;
@@ -721,6 +732,9 @@ img {
   }
 }
 @media screen and (max-width: 640px) {
+  .portfolio__item {
+    max-width: 32rem;
+  }
   .portfolio__item-img-block {
     min-height: 25rem;
   }
