@@ -2,9 +2,9 @@
   "name": "gulp-2020",
   "version": "1.0.0",
   "private": true,
-  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.11.1",
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
     "browser-sync": "^2.26.12",
     "css-mqpacker": "^7.0.0",
     "del": "^5.1.0",

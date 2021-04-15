@@ -85,11 +85,14 @@ const css = () => {
 exports.css = css;
 
 
-// Scripts
+// JS
 const scripts = () => {
-  return gulp.src('src/scripts/index.js')
+  return gulp.src('src/js/vue.js')
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
     .pipe(terser())
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('build/js'))
     .pipe(sync.stream());
 };
 exports.scripts = scripts;
@@ -103,7 +106,7 @@ const copy = () => {
   return gulp.src([
     "src/fonts/**/*.{woff,woff2}",
     "src/img/**",
-    "src/scripts/**",
+    "src/js/**",
     "src/page-*.html",
     "src/index.html"
   ], {
@@ -138,7 +141,7 @@ const watch = () => {
 
   gulp.watch("src/index.html", gulp.series(html)).on("change", sync.reload);
 
-  gulp.watch('src/scripts/**/*.js', gulp.series(scripts));
+  gulp.watch('src/js/**/*.js', gulp.series(scripts));
   gulp.watch([
     'src/fonts/**/*',
     'src/img/**/*',

@@ -7,7 +7,8 @@
     <title>MI</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="scripts/vue.js"></script>
+
+    <script src="js/vue.js"></script>
 
 </head>
 <body class="page__pages-body">
@@ -43,7 +44,9 @@
 
             <h3 class="sandbox__h3">Тестирование компонентов</h3>
             <ul class="sandbox__list">
-                <li class="sandbox__item"><p class="sandbox__item-txt">Cyr-To-Lat</p></li>
+                <li class="sandbox__item vue__item">
+                    <p class="sandbox__item-txt">{{ name }}</p>
+                </li>
                 <li class="sandbox__item"><p class="sandbox__item-txt">Query Monitor</p></li>
                 <li class="sandbox__item"><p class="sandbox__item-txt">WPS Hide Login</p></li>
                 <li class="sandbox__item"><p class="sandbox__item-txt">ACF</p></li>
@@ -58,7 +61,15 @@
 
 </main>
 
+<script>
+    let sample = new Vue({
+      el: '.vue__item',
+      data: {
+        name: 'Тест с подключенным vue.js'
+      }
+    });
 
+</script>
 
 </body>
 </html>
