@@ -13,6 +13,9 @@
 }
 
 .tools__part {
+  display: flex;
+  flex-wrap: wrap;
+
   width: 100%;
 
   margin: 0;
@@ -26,7 +29,19 @@
   border-bottom: 1px solid @lightgray;
 }
 
+.tools__logo {
+  width: auto;
+  height: 6rem;
+
+  margin: 0;
+  margin-bottom: 2rem;
+  padding: 0;
+
+  object-fit: cover;
+}
+
 .tools__h2 {
+  width: 100%;
   margin: 0;
   margin-bottom: 4rem;
   padding: 0;
@@ -40,6 +55,7 @@
 }
 
 .tools__h3 {
+  width: 100%;
   margin: 0;
   margin-bottom: 3rem;
   padding: 0;
@@ -60,11 +76,13 @@
   max-width: 100%;
 
   margin: 0;
+  margin-bottom: 5rem;
   padding: 0;
 
 }
 
 .tools__item {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,6 +100,15 @@
   box-sizing: border-box;
 
   background-color: @exlight;
+}
+
+.tools__item-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
 }
 
 .tools__item-txt {
