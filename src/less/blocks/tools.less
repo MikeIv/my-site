@@ -63,12 +63,14 @@
   font-size: 3em;
   font-weight: bold;
   color: @dark;
+
+  user-select: none;
 }
 
 .tools__h3 {
   width: 100%;
   margin: 0;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   padding: 0;
   padding-left: 0.5rem;
   box-sizing: border-box;
@@ -77,6 +79,8 @@
   font-size: 2em;
   font-weight: bold;
   color: @gray;
+
+  user-select: none;
 }
 
 .tools__list {
@@ -110,6 +114,12 @@
   box-sizing: border-box;
 
   background-color: @exlight;
+  transition: 0.6s;
+}
+
+.tools__item--link:hover {
+  background-color: @light;
+  transition: 0.6s;
 }
 
 .tools__item-link {
@@ -132,4 +142,10 @@
   font-size: 1.4rem;
   font-weight: bold;
   color: @dark;
+  transition: 0.6s;
+}
+
+.tools__item--link:hover .tools__item-txt {
+  color: @exlight;
+  transition: 0.6s;
 }
