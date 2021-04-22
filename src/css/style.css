@@ -600,7 +600,7 @@ img {
   font-weight: 400;
   font-size: 18px;
   line-height: 20px;
-  color: #919191;
+  color: #1B263B;
   text-transform: uppercase;
 }
 .contacts-block__header {
@@ -662,6 +662,7 @@ img {
   margin: 0;
   margin-bottom: 7rem;
   padding: 0;
+  padding-top: 3rem;
   padding-bottom: 3rem;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -670,8 +671,6 @@ img {
 }
 .tools__header-block {
   display: flex;
-  margin: 0;
-  padding: 0;
 }
 .tools__logo {
   width: auto;

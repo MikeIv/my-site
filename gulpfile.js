@@ -2,7 +2,7 @@
 
 const gulp = require("gulp"); // Подключаем Gulp
 const less = require("gulp-less"); // Подключаем Less пакет
-const htmlmin = require('gulp-htmlmin');
+const htmlmin = require('gulp-htmlmin'); //html минификатор
 const fileinclude = require("gulp-file-include"); // Сборка шаблонов html
 const minifycss = require("gulp-csso"); // CSS минификатор
 const sourcemaps = require('gulp-sourcemaps'); // Карта css
@@ -30,7 +30,6 @@ exports.clean = clean;
 
 
 // HTML
-
 const html = () => {
   gulp.src("src/index.html")
     .pipe(htmlmin({
@@ -87,7 +86,7 @@ exports.css = css;
 
 // JS
 const scripts = () => {
-  return gulp.src('src/js/vue.js')
+  return gulp.src('src/js/*.js')
     .pipe(babel({
       presets: ['@babel/env']
     }))
@@ -96,8 +95,6 @@ const scripts = () => {
     .pipe(sync.stream());
 };
 exports.scripts = scripts;
-
-
 
 
 
