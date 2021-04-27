@@ -14,6 +14,7 @@ const sortCSSmq = require('sort-css-media-queries'); // Sort your media-queries 
 const rename = require("gulp-rename"); // Подключаем библиотеку для переименования файлов
 
 const babel = require("gulp-babel"); // JS
+const uglify = require('gulp-uglify'); // JS сборщик
 const terser = require('gulp-terser'); // compressed es6+ code
 
 const sync = require("browser-sync").create(); // Подключаем Browser Sync
@@ -91,10 +92,23 @@ const scripts = () => {
       presets: ['@babel/env']
     }))
     .pipe(terser())
+    .pipe(uglify())
     .pipe(gulp.dest('build/js'))
     .pipe(sync.stream());
 };
 exports.scripts = scripts;
+
+
+// Вариант подключения Vue в gulp
+/*gulp.task('js', function() {
+  return browserify({ entries: 'src/js/main.js'})
+    .transform(babelify, { presets: ['es2015'] })
+    .transform(vueify)
+    .bundle()
+    .pipe(source('app.js'))
+    .pipe(gulp.dest('public/js'))
+    .pipe(connect.reload());
+});*/
 
 
 
@@ -112,7 +126,6 @@ const copy = () => {
     .pipe(gulp.dest("build"));
 };
 exports.copy = copy;
-
 
 
 
