@@ -38,7 +38,7 @@ const html = () => {
       collapseWhitespace: true
     }))
     .pipe(gulp.dest("build/"))
-    .pipe(sync.stream());
+    .pipe(sync.reload({stream: true}));
 };
 exports.html = html;
 
@@ -146,16 +146,15 @@ exports.server = server;
 const watch = () => {
   gulp.watch("src/less/**/*.less", gulp.series(css)).on("change", sync.reload);
   gulp.watch("src/*_build.html", gulp.series(fileincludehtml));
-  gulp.watch("src/html/*.html", gulp.series(fileincludehtml));
-  gulp.watch("src/page-*.html", gulp.series(fileincludehtml));
+  // gulp.watch("src/page-*.html", gulp.series(fileincludehtml));
 
-  gulp.watch("src/index.html", gulp.series(html)).on("change", sync.reload);
+  gulp.watch("src/*.html", gulp.series(html)).on("change", sync.reload);
 
   gulp.watch('src/js/**/*.js', gulp.series(scripts));
   gulp.watch([
     'src/fonts/**/*',
     'src/img/**/*',
-    'src/index.html',
+    'src/*.html',
   ], gulp.series(copy));
 };
 exports.watch = watch;
