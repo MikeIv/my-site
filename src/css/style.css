@@ -740,6 +740,11 @@ img {
   background-color: #e4e5e1;
   transition: 0.6s;
 }
+.tools__item--cmd {
+  width: 100%;
+  margin-bottom: 0;
+  background-color: transparent;
+}
 .tools__item--link:hover {
   background-color: #778DA9;
   transition: 0.6s;
@@ -761,6 +766,23 @@ img {
   font-weight: bold;
   color: #1B263B;
   transition: 0.6s;
+}
+.tools__item-txt--description {
+  text-align: left;
+  font-weight: normal;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.tools__item-txt--cmd {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: left;
+  color: #d4d7e0;
+  background-color: #1B263B;
 }
 .tools__item--link:hover .tools__item-txt {
   color: #e4e5e1;
