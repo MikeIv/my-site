@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MI</title>
 
-    <link rel="stylesheet" href="css/style.min.css?v=1">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <script src="js/vue.js"></script>
 
@@ -51,12 +51,13 @@
                     </li>
                 </ul>
 
-                <form action="" class="sandbox__form">
+                <div action="" class="sandbox__form">
                     <h4 class="sandbox__h4">{{ title }}</h4>
                     <input type="text" class="sandbox__input" v-model="text" :placeholder="textplace">
-                    <p class="sandbox__form-txt"> {{ text }}</p>
-                    <button class="sandbox__form-btn" @click="getText">get text</button>
-                </form>
+                    <button class="sandbox__form-btn" @click="getLowerText">get text</button>
+                    <p class="sandbox__form-txt"> {{ toLower }}</p>
+
+                </div>
 
             </div>
         </article>
@@ -74,9 +75,16 @@
         text: ' ',
         textplace: 'Введите текст'
       },
+      computed: {
+        toLower () {
+          return this.text.toLowerCase()
+        }
+      },
       methods: {
-        getText () {
-          console.log('проверка метода' + ' ' + this.text)
+        getLowerText () {
+          //console.log('проверка метода' + ' ' + this.text)
+          //console.log(`проверка метода ${this.text}`)
+          this.text = this.text.toLowerCase()
         }
       }
     });
