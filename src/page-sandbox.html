@@ -43,12 +43,15 @@
             <h2 class="sandbox__h2">Vue</h2>
 
             <h3 class="sandbox__h3">Тестирование компонентов</h3>
-            <ul class="sandbox__list">
-                <li class="sandbox__item vue__item">
-                    <p class="sandbox__item-txt">{{ name }}</p>
-                </li>
 
-            </ul>
+            <div class="vue-app">
+                <ul class="sandbox__list">
+                    <li class="sandbox__item vue__item">
+                        <p class="sandbox__item-txt">{{ name }}</p>
+                    </li>
+                </ul>
+
+            </div>
         </article>
 
 
@@ -61,7 +64,7 @@
 
 <script>
     let sample = new Vue({
-      el: '.vue__item',
+      el: '.vue-app',
       data: {
         name: 'Элемент списка'
       }
