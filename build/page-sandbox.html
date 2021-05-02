@@ -51,14 +51,17 @@
                     </li>
                 </ul>
 
+                <form action="" class="sandbox__form">
+                    <h4 class="sandbox__h4">{{ title }}</h4>
+                    <input type="text" class="sandbox__input" v-model="text" :placeholder="textplace">
+                    <p class="sandbox__form-txt"> {{ text }}</p>
+                    <button class="sandbox__form-btn" @click="getText">get text</button>
+                </form>
+
             </div>
         </article>
 
-
-
     </section>
-
-
 
 </main>
 
@@ -66,7 +69,15 @@
     let sample = new Vue({
       el: '.vue-app',
       data: {
-        name: 'Элемент списка'
+        title: 'Элементы формы',
+        name: 'Элемент списка',
+        text: ' ',
+        textplace: 'Введите текст'
+      },
+      methods: {
+        getText () {
+          console.log('проверка метода' + ' ' + this.text)
+        }
       }
     });
 
