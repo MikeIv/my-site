@@ -866,6 +866,7 @@ img {
 }
 .sandbox__wrapper {
   width: 100%;
+  min-height: 30rem;
   margin: 0 auto;
   padding: 0;
   padding-top: 2rem;
@@ -1031,7 +1032,7 @@ img {
 .sandbox__if-header {
   width: 100%;
   margin: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   padding: 0;
   padding-bottom: 1rem;
   box-sizing: border-box;

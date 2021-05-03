@@ -64,7 +64,15 @@
                     <button class="sandbox__form-btn" @click="getContent">Включатель</button>
                     <div class="sandbox__if" v-if="showContent">
 
-                        <h2 class="sandbox__if-header">Проверка условий</h2>
+                        <h4 class="sandbox__if-header">Проверка условий</h4>
+                        <h4 class="sandbox__if-header">Users:</h4>
+                        <ul class="sandbox__list">
+                            <li class="sandbox__item vue__item" v-for="user in users" :key="user">
+                                <p class="sandbox__item-txt">{{ user }}</p>
+                            </li>
+                        </ul>
+
+
 
                     </div>
 
