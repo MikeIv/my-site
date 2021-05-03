@@ -89,7 +89,12 @@
         showContent: true,
         name: 'Элемент списка',
         text: ' ',
-        textplace: 'Введите текст'
+        textplace: 'Введите текст',
+        user: {
+          name: 'Костя',
+          email: 'info@mail.ru'
+        },
+        users: ['Kostya', 'Andrey', 'Fedr' ]
       },
       computed: {
         toLower () {
@@ -104,6 +109,7 @@
         },
         getContent () {
           this.showContent = !this.showContent
+          console.log(this.users)
         }
 
       }
