@@ -99,7 +99,7 @@
   align-items: center;
 
   width: auto;
-  height: 4rem;
+  min-height: 4rem;
 
   margin: 0;
   margin-bottom: 1.5rem;
@@ -113,15 +113,27 @@
   background-color: @exlight;
 }
 
-.vue__item {
+.sandbox__item--column {
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
 }
 
 .sandbox__item-txt {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: auto;
 
   margin: 0;
   padding: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
 
   text-align: center;
   font-family: inherit;
@@ -130,10 +142,15 @@
   color: @dark;
 }
 
+.sandbox__item-txt--mb {
+  margin-bottom: 1rem;
+}
+
 /** form **/
 .sandbox__form {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 
   width: 100%;
 
@@ -186,12 +203,13 @@
   justify-content: center;
   align-items: center;
 
-  width: 14rem;
   height: 4rem;
 
   margin: 0;
   margin-bottom: 3rem;
   padding: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
   font-family: inherit;
   font-size: 1.4rem;
@@ -203,6 +221,7 @@
   border: none;
 
   cursor: pointer;
+  user-select: none;
 }
 
 .sandbox__form-btn:hover {
