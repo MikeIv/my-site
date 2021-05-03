@@ -44,6 +44,7 @@
 
             <h3 class="sandbox__h3">Тестирование компонентов</h3>
 
+            <!-- vue app -->
             <div class="vue-app">
                 <ul class="sandbox__list">
                     <li class="sandbox__item vue__item">
@@ -56,10 +57,23 @@
                     <input type="text" class="sandbox__input" v-model="text" :placeholder="textplace">
                     <button class="sandbox__form-btn" @click="getLowerText">get text</button>
                     <p class="sandbox__form-txt"> {{ toLower }}</p>
-
                 </div>
 
+<!--       проверка работы условий         -->
+                <div class="sandbox__wrapper">
+                    <button class="sandbox__form-btn" @click="getContent">Включатель</button>
+                    <div class="sandbox__if" v-if="showContent">
+
+                        <h2 class="sandbox__if-header">Проверка условий</h2>
+
+                    </div>
+
+                </div>
+                <!--       проверка работы условий     END     -->
+
             </div>
+            <!-- vue app END -->
+
         </article>
 
     </section>
@@ -71,6 +85,8 @@
       el: '.vue-app',
       data: {
         title: 'Элементы формы',
+        header: 'v-if',
+        showContent: true,
         name: 'Элемент списка',
         text: ' ',
         textplace: 'Введите текст'
@@ -85,7 +101,11 @@
           //console.log('проверка метода' + ' ' + this.text)
           //console.log(`проверка метода ${this.text}`)
           this.text = this.text.toLowerCase()
+        },
+        getContent () {
+          this.showContent = !this.showContent
         }
+
       }
     });
 
