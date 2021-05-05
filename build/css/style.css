@@ -722,6 +722,12 @@ img {
   margin-bottom: 5rem;
   padding: 0;
 }
+.tools__list--logo {
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding-top: 6rem;
+  border-top: 1px solid #B4BACC;
+}
 .tools__item {
   position: relative;
   display: flex;
@@ -752,7 +758,7 @@ img {
   align-items: center;
   width: 7rem;
   height: 7rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   margin-left: 2rem;
   margin-right: 2rem;
   padding: 0;
