@@ -119,6 +119,10 @@ const copy = () => {
     "src/img/**",
     "src/js/**",
     "src/page-*.html",
+    "src/contacts/*.html",
+    "src/tools/*.html",
+    "src/portfolio/*.html",
+    "src/sandbox/*.html",
     "src/index.html"
   ], {
     base: "src"
@@ -155,6 +159,7 @@ const watch = () => {
     'src/fonts/**/*',
     'src/img/**/*',
     'src/*.html',
+    'src/**/*.html',
   ], gulp.series(copy));
 };
 exports.watch = watch;
