@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MI</title>
+
+    <link rel="stylesheet" href="css/style.min.css?v=3">
+
+    <script src="js/vue.js"></script>
+
+</head>
+<body class="page__pages-body">
+
+<header class="header-pages">
+
+    <div class="header__page-wrapper">
+        <a href="index.html">
+            <img src="img/my-logo.svg" alt="logo" class="header__main-logo">
+        </a>
+        <div class="header__left-line"></div>
+
+        <h1 class="header__page-h1">Песочница</h1>
+    </div>
+
+    <nav class="page-nav">
+        <ul class="page-nav__list">
+            <li class="page-nav__item"><a href="page-portfolio.html" class="page-nav__link">Портфолио</a></li>
+            <li class="page-nav__item"><a href="page-tools.html" class="page-nav__link">Инструменты</a></li>
+            <li class="page-nav__item"><a href="page-contacts.html" class="page-nav__link">Контакты</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+    <section class="sandbox">
+        <h1 class="v-hidden">Инструменты</h1>
+
+        <article class="sandbox__part">
+            <h2 class="sandbox__h2">Vue</h2>
+
+            <h3 class="sandbox__h3">Тестирование компонентов</h3>
+
+            <!-- vue app -->
+            <div class="vue-app">
+                <ul class="sandbox__list">
+                    <li class="sandbox__item vue__item">
+                        <p class="sandbox__item-txt">{{ name }}</p>
+                    </li>
+                </ul>
+
+                <div action="" class="sandbox__form">
+                    <h4 class="sandbox__h4">{{ title }}</h4>
+                    <input type="text" class="sandbox__input" v-model="text" :placeholder="textplace">
+                    <button class="sandbox__form-btn" @click="getLowerText">введи текст и нажми</button>
+                    <p class="sandbox__form-txt"> {{ toLower }}</p>
+                </div>
+
+<!--       проверка работы условий         -->
+                <div class="sandbox__wrapper">
+                    <button class="sandbox__form-btn" @click="getContent">Включатель</button>
+                    <div class="sandbox__if" v-if="showContent">
+
+                        <h4 class="sandbox__if-header">Проверка условий</h4>
+                        <h4 class="sandbox__if-header">Users:</h4>
+                        <ul class="sandbox__list">
+                            <li class="sandbox__item sandbox__item--column" v-for="(user, index) in users"
+                                :key="user.id">
+                                <p class="sandbox__item-txt sandbox__item-txt--mb">{{ user.name }}</p>
+                                <p class="sandbox__item-txt sandbox__item-txt--mb">{{ user.email }}</p>
+                                <p class="sandbox__item-txt sandbox__item-txt--mb">{{ user.age }}</p>
+                            </li>
+                        </ul>
+
+
+
+                    </div>
+
+                </div>
+                <!--       проверка работы условий     END     -->
+
+            </div>
+            <!-- vue app END -->
+
+
+            <img src="https://via.placeholder.com/200x50" />
+
+        </article>
+
+    </section>
+
+</main>
+
+<script>
+    let sample = new Vue({
+      el: '.vue-app',
+      data: {
+        title: 'Элементы формы',
+        header: 'v-if',
+        showContent: true,
+        name: 'Элемент списка',
+        text: ' ',
+        textplace: 'Введите текст',
+        // user: {
+        //   name: 'Костя',
+        //   email: 'info@mail.ru'
+        // },
+        users: [
+          {id: '001', name: 'Kostya', email: 'kostya@mail.ru', age: '38'},
+          {id: '002', name: 'Andrey', email: 'andrey@mail.ru', age: '33'},
+          {id: '003', name: 'Fedya', email: 'fedya@mail.ru', age: '28'}
+        ]
+      },
+      computed: {
+        toLower () {
+          return this.text.toLowerCase()
+        }
+      },
+      methods: {
+        getLowerText () {
+          //console.log('проверка метода' + ' ' + this.text)
+          //console.log(`проверка метода ${this.text}`)
+          this.text = this.text.toLowerCase()
+        },
+        getContent () {
+          this.showContent = !this.showContent
+          console.log(this.users)
+        }
+
+      }
+    });
+
+</script>
+
+</body>
+</html>

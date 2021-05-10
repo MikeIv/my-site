@@ -1,0 +1,2 @@
+
+#RewriteRule (.*)\\\\\\\\.html$ $1
