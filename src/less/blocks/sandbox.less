@@ -78,7 +78,7 @@
   font-family: inherit;
   font-size: 1.6rem;
   font-weight: bold;
-  color: @gray;
+  color: @base;
 }
 
 .sandbox__list {
@@ -252,4 +252,83 @@
   font-size: 1.4rem;
   font-weight: bold;
   color: @dark;
+}
+
+//pre
+.pre {
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  word-break: break-all;
+  clear: both;
+  white-space: pre;
+}
+
+.pre-code {
+  display: block;
+  padding: 16px 32px;
+
+  font-size: 2rem;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background: #fbfdff;
+  box-sizing: border-box;
+  tab-size: 4;
+  white-space: pre;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  text-overflow: initial;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overflow-y: hidden;
+}
+
+/*-- TESTAPP Vue --*/
+.testapp {
+  width: 100%;
+
+  margin: 0;
+  margin-top: 4rem;
+  padding: 0;
+  padding-top: 3rem;
+
+  border-top: 1px dashed @lightgray;
+}
+
+.note-card {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 30rem;
+
+  margin: 0;
+  margin-bottom: 2rem;
+  padding: 2rem;
+
+  background-color: @exlightgray;
+  border-radius: 0.5rem;
+}
+
+.note-header {
+  width: 100%;
+
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0;
+
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.note-body {
+  width: 100%;
+
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0;
+
+  font-size: 1.4rem;
 }

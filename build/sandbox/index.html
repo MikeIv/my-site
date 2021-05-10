@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MI</title>
 
-    <link rel="stylesheet" href="../css/style.min.css?v=2">
+    <link rel="stylesheet" href="../css/style.min.css?v=4">
 
     <script src="../js/vue.js"></script>
 
@@ -36,10 +36,10 @@
 
 <main>
 
-    <section class="sandbox">
+    <section class="sandbox" style="overflow: hidden">
         <h1 class="v-hidden">Инструменты</h1>
 
-        <article class="sandbox__part">
+        <article class="sandbox__part" style="overflow: hidden">
             <h2 class="sandbox__h2">Vue</h2>
 
             <h3 class="sandbox__h3">Тестирование компонентов</h3>
@@ -59,7 +59,7 @@
                     <p class="sandbox__form-txt"> {{ toLower }}</p>
                 </div>
 
-<!--       проверка работы условий         -->
+                <!--       проверка работы условий         -->
                 <div class="sandbox__wrapper">
                     <button class="sandbox__form-btn" @click="getContent">Включатель</button>
                     <div class="sandbox__if" v-if="showContent">
@@ -86,7 +86,36 @@
             <!-- vue app END -->
 
 
-            <img src="https://via.placeholder.com/200x50" />
+            <!-- vue 2 app -->
+            <div class="testapp">
+
+                <h4 class="sandbox__h4">{{ title }}</h4>
+                <div class="notes">
+                    <div class="note" v-for="(note, index) in notes" :key="index">
+                        <div class="note-card">
+                            <p class="note-header">{{ note.title }}</p>
+                            <p class="note-body">{{ note.descr }}</p>
+                            <span class="note-datу">{{ note.date }}</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+<!--            <img src="https://via.placeholder.com/200x50" />-->
+
+<!--
+            <pre class="pre" style="overflow: hidden">
+                <code class="pre-code">
+                    <span class="hljs-tag">&lt;<span class="hljs-name">section</span>
+                    <span class="hljs-attr">class</span>=<span class="hljs-string">"newsletter"</span>
+                    <span class="hljs-attr">style</span>=<span class="hljs-string">"background-image: url('/assets/ui/decoraitve/newsletter-lg-aj1891101.svg')"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+                </code>
+            </pre>
+   -->
 
         </article>
 
@@ -95,44 +124,71 @@
 </main>
 
 <script>
-    let sample = new Vue({
-      el: '.vue-app',
+  let sample = new Vue({
+    el: '.vue-app',
+    data: {
+      title: 'Элементы формы',
+      header: 'v-if',
+      showContent: true,
+      name: 'Элемент списка',
+      text: ' ',
+      textplace: 'Введите текст',
+      // user: {
+      //   name: 'Костя',
+      //   email: 'info@mail.ru'
+      // },
+      users: [
+        {id: '001', name: 'Kostya', email: 'kostya@mail.ru', age: '38'},
+        {id: '002', name: 'Andrey', email: 'andrey@mail.ru', age: '33'},
+        {id: '003', name: 'Fedya', email: 'fedya@mail.ru', age: '28'}
+      ]
+    },
+    computed: {
+      toLower () {
+        return this.text.toLowerCase()
+      }
+    },
+    methods: {
+      getLowerText () {
+        //console.log('проверка метода' + ' ' + this.text)
+        //console.log(`проверка метода ${this.text}`)
+        this.text = this.text.toLowerCase()
+      },
+      getContent () {
+        this.showContent = !this.showContent
+        console.log(this.users)
+      }
+
+    }
+  });
+
+</script>
+
+<script>
+    let testapp = new Vue({
+      el: '.testapp',
       data: {
-        title: 'Элементы формы',
-        header: 'v-if',
-        showContent: true,
-        name: 'Элемент списка',
-        text: ' ',
-        textplace: 'Введите текст',
-        // user: {
-        //   name: 'Костя',
-        //   email: 'info@mail.ru'
-        // },
-        users: [
-          {id: '001', name: 'Kostya', email: 'kostya@mail.ru', age: '38'},
-          {id: '002', name: 'Andrey', email: 'andrey@mail.ru', age: '33'},
-          {id: '003', name: 'Fedya', email: 'fedya@mail.ru', age: '28'}
+        title: 'Notes App',
+        notes: [
+          {
+            title: 'Заметка №1',
+            descr: 'Описание для заметки №1',
+            date: new Date(Date.now()).toLocaleString()
+          },
+          {
+            title: 'Заметка №2',
+            descr: 'Описание для заметки №2',
+            date: new Date(Date.now()).toLocaleString()
+          } ,
+          {
+            title: 'Заметка №3',
+            descr: 'Описание для заметки №3',
+            date: new Date(Date.now()).toLocaleString()
+          }
         ]
-      },
-      computed: {
-        toLower () {
-          return this.text.toLowerCase()
-        }
-      },
-      methods: {
-        getLowerText () {
-          //console.log('проверка метода' + ' ' + this.text)
-          //console.log(`проверка метода ${this.text}`)
-          this.text = this.text.toLowerCase()
-        },
-        getContent () {
-          this.showContent = !this.showContent
-          console.log(this.users)
-        }
 
       }
-    });
-
+    })
 </script>
 
 </body>
