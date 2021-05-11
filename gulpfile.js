@@ -32,12 +32,8 @@ exports.clean = clean;
 
 // HTML
 const html = () => {
-  gulp.src("src/index.html")
-    .pipe(htmlmin({
-      removeComments: true,
-      collapseWhitespace: true
-    }))
-    .pipe(gulp.dest("build/"))
+  gulp.src("src/**/*.html")
+    .pipe(gulp.dest("./build"))
     .pipe(sync.reload({stream: true}));
 };
 exports.html = html;
@@ -118,12 +114,7 @@ const copy = () => {
     "src/fonts/**/*.{woff,woff2}",
     "src/img/**",
     "src/js/**",
-    "src/page-*.html",
-    "src/contacts/*.html",
-    "src/tools/*.html",
-    "src/portfolio/*.html",
-    "src/sandbox/*.html",
-    "src/index.html"
+    "src/**/*.html",
   ], {
     base: "src"
   })
@@ -150,15 +141,12 @@ exports.server = server;
 const watch = () => {
   gulp.watch("src/less/**/*.less", gulp.series(css)).on("change", sync.reload);
   gulp.watch("src/*_build.html", gulp.series(fileincludehtml));
-  // gulp.watch("src/page-*.html", gulp.series(fileincludehtml));
-
-  gulp.watch("src/*.html", gulp.series(html)).on("change", sync.reload);
+  gulp.watch("src/**/*.html", gulp.series(html)).on("change", sync.reload);
 
   gulp.watch('src/js/**/*.js', gulp.series(scripts));
   gulp.watch([
     'src/fonts/**/*',
     'src/img/**/*',
-    'src/*.html',
     'src/**/*.html',
   ], gulp.series(copy));
 };
@@ -170,9 +158,7 @@ exports.watch = watch;
 exports.default = gulp.series(
   gulp.parallel(
     clean,
-
   ),
-
   css,
   copy,
   gulp.parallel(
