@@ -91,6 +91,15 @@
             <div class="testapp">
 
                 <h4 class="sandbox__h4">{{ title }}</h4>
+
+                <!-- new note -->
+                <div class="new-note">
+                    <input type="text">
+                    <textarea></textarea>
+                    <button>New note</button>
+                </div>
+
+                <!--  note list-->
                 <div class="notes">
                     <div class="note" v-for="(note, index) in notes" :key="index">
                         <div class="note-card">
