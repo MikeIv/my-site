@@ -94,9 +94,9 @@
 
                 <!-- new note -->
                 <div class="new-note">
-                    <input type="text">
-                    <textarea></textarea>
-                    <button>New note</button>
+                    <input v-model="note.title" type="text" class="new-note__input">
+                    <textarea v-model="note.descr" class="new-note__textarea"></textarea>
+                    <button @click="addNote" class="new-note__btn">New note</button>
                 </div>
 
                 <!--  note list-->
@@ -280,6 +280,10 @@
       el: '.testapp',
       data: {
         title: 'Notes App',
+          note: {
+            title: '',
+              descr: '',
+          },
         notes: [
           {
             title: 'Заметка №1',
@@ -297,7 +301,15 @@
             date: new Date(Date.now()).toLocaleString()
           }
         ]
-
+      },
+      methods: {
+          addNote() {
+              // console.log(this.note)
+              this.notes.push ({
+                  title: this.note.title,
+                  descr: this.note.descr,
+              })
+          }
       }
     })
 </script>
