@@ -795,9 +795,15 @@ img {
   padding: 0;
   background-color: transparent;
 }
+.tools__item--link {
+  background-color: #d6e6ea;
+}
 .tools__item--link:hover {
   background-color: #778DA9;
   transition: 0.3s;
+}
+.tools__item--mt {
+  margin-top: 2rem;
 }
 .tools__item-link {
   position: absolute;
