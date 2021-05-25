@@ -315,6 +315,7 @@ img {
   width: 100%;
   margin: 0 auto;
   padding: 0;
+  background-color: transparent;
   z-index: 5;
 }
 /* --- pages header --- */
@@ -679,7 +680,9 @@ img {
   flex-wrap: wrap;
   max-width: 100rem;
   min-height: 10rem;
-  margin: 0 auto;
+  margin: 0;
+  margin-left: auto;
+  margin-right: 20rem;
   padding: 0;
   background-color: #ffffff;
 }
@@ -1379,6 +1382,20 @@ img {
   font-weight: bold;
   color: #D92323;
 }
+@media only screen and (max-width: 1312px) {
+  .portfolio {
+    max-width: 90rem;
+    margin-right: 10rem;
+  }
+  .tools {
+    max-width: 90rem;
+    margin-right: 10rem;
+  }
+  .sandbox {
+    max-width: 90rem;
+    margin-right: 10rem;
+  }
+}
 @media (max-width: 1170px) {
   .nav-block__list {
     margin-left: 10px;
@@ -1391,6 +1408,39 @@ img {
   }
   .portfolio-block__item img {
     margin: auto;
+  }
+}
+@media only screen and (max-width: 1092px) {
+  .portfolio {
+    max-width: 80rem;
+    margin-right: 5rem;
+  }
+  .tools {
+    max-width: 80rem;
+    margin-right: 5rem;
+  }
+  .sandbox {
+    max-width: 80rem;
+    margin-right: 5rem;
+  }
+}
+@media only screen and (max-width: 926px) {
+  .portfolio {
+    max-width: 70rem;
+    margin-right: 1rem;
+  }
+  .tools {
+    max-width: 70rem;
+    margin-right: 1rem;
+  }
+  .sandbox {
+    max-width: 70rem;
+    margin-right: 1rem;
+  }
+}
+@media only screen and (max-width: 794px) {
+  .header-pages {
+    position: relative;
   }
 }
 @media screen and (max-width: 640px) {

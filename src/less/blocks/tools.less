@@ -6,11 +6,36 @@
   max-width: 100rem;
   min-height: 10rem;
 
-  margin: 0 auto;
+  margin: 0;
+  margin-left: auto;
+  margin-right: 20rem;
   padding: 0;
 
   background-color: @white;
 }
+
+@media only screen and (max-width: 1312px) {
+  .tools {
+    max-width: 90rem;
+    margin-right: 10rem;
+  }
+}
+
+@media only screen and (max-width: 1092px) {
+  .tools {
+    max-width: 80rem;
+    margin-right: 5rem;
+  }
+}
+
+@media only screen and (max-width: 926px) {
+  .tools {
+    max-width: 70rem;
+    margin-right: 1rem;
+  }
+}
+
+
 
 .tools__part {
   display: flex;
